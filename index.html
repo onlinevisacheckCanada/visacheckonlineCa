@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Visa Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #376157;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #profile-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #user-photo {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Canada Visa Check Profile</h1>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="rasel156@" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="hg35ntpk" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+
+        <div id="profile-section">
+            <h2>CANADA Official Website<br>Wellcome,<span id="user-name"></span>!</h2>
+            <p><h2>Application Status: Complete</h2></p>
+            <p><h4>Application Type: Work Permit Visa</h4></p>
+            <p><h4>Application Number: VH69349650</h4></p>
+            <p><h4>Passport Number: EK0248058</h4></p>
+            <p><h4>Name: MOHAMMAD RASEL</h4></p>
+            <p><h4>Email Address: mdrselkhanr436@gmail.com</h4></p>
+            <p><h4>Nationality at Birth: Bangladeshi</h4></p>
+            <p><h4>Dath off Birth: 28/08/1993</h4></p>
+            <p><h4>Religeion: ISLAM</h4></p>
+            <p><h4>sex: Male</h4></p>
+            <p><h4>Passport No: EK0248058</h4></p>
+            <p><h4>Destination: Canada</h4></p>
+            <P><H4>Present Address: SAUDI ARABIA</H4></P>
+            <P><H4>Permanent Address: Bangladesh</H4></P>
+            <p><h4>Language: English/Bangla</h4></p>
+            <p><h2>Documents Status</h2></p>
+            <p><h4>Company Name: Manitoba Hydro International</h4></p>
+            <P><h4>Salary: $2580.50(per month)</h4></P>
+            <p><h5>Location: 211 Commerce Dr. Winnipeg, MB R3P 1A3,Canada<br><br> <br>
+            Hours Of Work well be 45 Hours (Saturday To Thursday)</h5></p>
+            <p><h5>Accommodation And Meals Will Be Provided By Company</h5></p>
+            <p><h5>You Will be Workinkg On A Contract Period Off 2 Years initially(Extendable Upon Your Performence)</h5></p>
+            <p><h5>You Well be getting Leaves of 3 Weeks in a Year</h5></p>
+            <p><h2>Biometris: Complete</h2></p>
+            <p><h2>Medical Exam: Complete</h2></p>
+            <p><h2>Payment transaction History: View </h2></p>
+            <p id="bio-data"></p>
+            <p><h3>Visa</h3></p>
+            <img id="user-photo" alt="User Photo">
+
+            <button onclick="logout()">Logout</button>
+        </div>
+    </main>
+
+    <script>
+        function login() {
+            const username = document.getElementById('rasel156@').value;
+            const password = document.getElementById('hg35ntpk').value;
+
+            // Perform authentication here (This is where the backend comes into play)
+
+            // For demonstration purposes, let's assume the login is successful
+            const bioData = "";
+            const photoUrl= ["image.jpg"];
+
+            // Update the UI with user information
+            document.getElementById('user-name').textContent = username;
+            document.getElementById('bio-data').textContent = bioData;
+            document.getElementById('user-photo').src = photoUrl;
+
+            // Show the profile section and hide the login form
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('profile-section').style.display = 'block';
+        }
+
+        function logout() {
+            // Reset the form and hide the profile section
+            document.getElementById('login-form').reset();
+            document.getElementById('login-form').style.display = 'flex';
+            document.getElementById('profile-section').style.display = 'none'
+        }
+    </script>
+
+</body>
+</html>
